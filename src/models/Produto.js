@@ -1,3 +1,9 @@
+
+///O arquivo Produto.js segue a mesma arquitetura utilizada em Cliente.js. 
+// Ele possui métodos para listar, buscar, cadastrar, atualizar e excluir produtos, 
+// mantendo um padrão de desenvolvimento em todo o sistema."
+
+
 const { ready, query, run, get } = require('../database/sqlite');
 
 function formatarProduto(row) {

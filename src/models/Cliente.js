@@ -1,3 +1,7 @@
+//O arquivo Cliente.js é responsável por gerenciar os dados dos clientes, realizando operações como cadastro,
+// consulta, atualização e exclusão. 
+// Além disso, ele trata e organiza as informações antes de armazená-las ou exibi-las no sistema."
+
 const { ready, query, run, get } = require('../database/sqlite');
 // Importa funções para interagir com o banco de dados SQLite:
 // - ready: espera o banco de dados estar pronto para interações.
@@ -21,8 +25,8 @@ function formatarCliente(row) {
     updatedAt:  row.updated_at,            // Data da última atualização do cliente
   };
 }
-
-
+//A função formatarCliente organiza os dados vindos do banco de dados,
+//  convertendo algumas informações para o formato correto antes de serem utilizadas pelo sistema.
 const Cliente = {
 
 
@@ -44,7 +48,7 @@ const Cliente = {
     return rows.map(formatarCliente);  // Retorna os clientes formatados
   },
 
-
+// O método findAll é responsável por listar os clientes cadastrados e também realizar buscas quando o usuário utiliza a pesquisa.
   async findById(id) {
     // Método para encontrar um cliente específico pelo ID
     await ready;  // Espera o banco de dados estar pronto
